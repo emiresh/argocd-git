@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kube-promethus-stack
+  name: kube-prometheus-stack
   namespace: argocd
 spec:
   destination:
     namespace: monitoring
     server: https://kubernetes.default.svc
-  project: kube-promethus-stack
+  project: default  # Specify the appropriate Argo CD project
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 50.0.0
@@ -15,9 +15,17 @@ spec:
     values: |
       grafana:
         enabled: true
-      prometheusOperator:
+      prometheus:
+        enabled: false
+      alertmanager:
         enabled: false
       kube-state-metrics:
+        enabled: false
+      nodeExporter:
+        enabled: false
+      kubelet:
+        enabled: false
+      pushgateway:
         enabled: false
       # Disable other components as needed
   syncPolicy:
