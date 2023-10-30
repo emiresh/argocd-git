@@ -8,21 +8,17 @@ spec:
     namespace: wordpress
     server: https://kubernetes.default.svc
   project: wordpress
-  sources:
-    - chart: wordpress
-      repoURL: https://charts.bitnami.com/bitnami
-      targetRevision: 18.0.11
-      helm:
-        valueFiles:
-        - wordpress/wordpress.yaml
-    # Values from Git
-    - repoURL: 'https://github.com/emiresh/argocd-git'
-      targetRevision: HEAD
-      ref: values
+  source:
+    chart: wordpress
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 18.0.11
+    helm:
+      parameters:
+        mariadb:
+          auth:
+            username: bn_iresh
+        
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
     syncOptions:
-      - ServerSideApply=true
-      - CreateNamespace=true
+    - CreateNamespace=true
