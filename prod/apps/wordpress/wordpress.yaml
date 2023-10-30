@@ -17,7 +17,7 @@ spec:
       - name: wordpressUsername
         value: iresh
       - name: wordpressPassword
-        value: iresh@1998
+        value: iresh@19989
   syncPolicy:
     automated: {}
     syncOptions:
