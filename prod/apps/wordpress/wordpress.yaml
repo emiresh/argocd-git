@@ -14,8 +14,8 @@ spec:
     targetRevision: 17.0.0
     helm:
       parameters:
-      - name: wordpressUsername
-        value: iresh
+        - name: wordpressUsername
+          value: iresh
       valueFiles:
         - values.yaml
   syncPolicy:
