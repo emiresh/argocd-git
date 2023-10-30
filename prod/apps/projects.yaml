@@ -17,3 +17,18 @@ spec:
 ---
 
 
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: kube-prometheus-stack
+  namespace: argocd
+spec:
+  description: kube-prometheus-stack
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
