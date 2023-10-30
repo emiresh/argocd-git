@@ -14,7 +14,7 @@ spec:
       targetRevision: 18.0.11
       helm:
         valueFiles:
-        - $values/wordpress/wordpress.yaml
+        - wordpress/wordpress.yaml
     # Values from Git
     - repoURL: 'https://github.com/emiresh/argocd-git'
       targetRevision: HEAD
