@@ -13,9 +13,6 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 17.0.0
     helm:
-      parameters:
-      - name: wordpressUsername
-        value: iresh
       values: values/wordpress-values.yaml
   syncPolicy:
     automated: {}
