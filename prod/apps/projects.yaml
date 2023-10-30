@@ -16,11 +16,10 @@ spec:
 
 ---
 
-
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: kube-prometheus-stack
+  name: kube-promethus-stack
   namespace: argocd
 spec:
   description: kube-prometheus-stack
@@ -32,3 +31,5 @@ spec:
     server: '*'
   sourceRepos:
   - '*'
+
+  ---
