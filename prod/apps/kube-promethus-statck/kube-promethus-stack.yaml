@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: kube-promethus-stack
   source:
-    chart: prometheus-community/kube-prometheus-stack
+    chart: kube-prometheus-stack
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 52.1.0
     helm:
