@@ -14,9 +14,9 @@ spec:
       targetRevision: 52.1.0
       helm:
         valueFiles:
-        - $values/multiple-source-application/values-prod.yaml
+        - $values/kube-promethus-stack/values.yaml
     # Values from Git
-    - repoURL: 'https://github.com/morey-tech/argo-cd-helm-values-demo'
+    - repoURL: 'https://github.com/emiresh/argocd-git'
       targetRevision: HEAD
       ref: values
   syncPolicy:
