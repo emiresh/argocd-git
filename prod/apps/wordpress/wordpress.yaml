@@ -15,7 +15,7 @@ spec:
       helm:
         parameters:
         - name: wordpressUsername
-          value: iresh
+          value: Asha
         valueFiles:
         - $values/prod/apps/wordpress/values.yaml
     - repoURL: 'https://github.com/emiresh/argocd-git'
