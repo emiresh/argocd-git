@@ -11,11 +11,14 @@ spec:
   source:
     chart: wordpress
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 16.0.0
+    targetRevision: 17.0.0
     helm:
-      valueFiles:
-        - values.yaml
+      parameters:
+      - name: wordpressUsername
+        value: iresh
+      - name: wordpressPassword
+        value: iresh@19989
   syncPolicy:
     automated: {}
-  syncOptions:
+    syncOptions:
     - CreateNamespace=true
