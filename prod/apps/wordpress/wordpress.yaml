@@ -16,8 +16,7 @@ spec:
       parameters:
       - name: wordpressUsername
         value: iresh
-      values: |-
-        wordpress-values.yaml
+      values: values/wordpress-values.yaml
   syncPolicy:
     automated: {}
     syncOptions:
