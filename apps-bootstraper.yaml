@@ -16,7 +16,7 @@ spec:
       recurse: true
     path: prod/apps
     repoURL: https://github.com/emiresh/argocd-git.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated: {}
     syncOptions:
