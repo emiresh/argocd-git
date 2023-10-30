@@ -1,0 +1,23 @@
+## Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps-bootstrapper
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: argocd/prod/apps
+    repoURL: git@github.com:emiresh/argocd-git.git
+    targetRevision: master
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
