@@ -15,7 +15,7 @@ spec:
       jsonnet: {}
       recurse: true
     path: prod/apps
-    repoURL: https://github.com/emiresh/argocd-git
+    repoURL: https://github.com/emiresh/argocd-git.git
     targetRevision: master
   syncPolicy:
     automated: {}
