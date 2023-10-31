@@ -22,4 +22,4 @@ spec:
       wordpressUsername: iresh
       wordpressPassword: iresh@1998
       mariadb:
-        enabled: true
+        enabled: false
