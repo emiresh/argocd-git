@@ -9,20 +9,16 @@ spec:
     server: https://kubernetes.default.svc
   project: wordpress
   source:
-    repoURL: https://charts.bitnami.com/bitnami
     chart: wordpress
+    repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 17.0.0
-  syncPolicy:
-    automated: {}
-    syncOptions:
-    - CreateNamespace=true
     helm:
       parameters:
       - name: wordpressUsername
         value: iresh
       - name: wordpressPassword
         value: iresh@19989
-      - name: mariadb.enabled
-        value: "false"
-
-  
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
