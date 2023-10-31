@@ -22,5 +22,3 @@ spec:
       value: iresh
     - name: wordpressPassword
       value: iresh@19989
-    - name: mariadb.enabled
-      value: "false"
