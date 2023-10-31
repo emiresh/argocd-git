@@ -16,8 +16,7 @@ spec:
       values: |
         wordpressUsername: iresh
         wordpressPassword: iresh@1998
-        mariadb:
-          enabled: false
+   
   syncPolicy:
     automated: {}
     syncOptions:
