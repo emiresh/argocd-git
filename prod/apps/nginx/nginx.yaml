@@ -16,6 +16,8 @@ spec:
       parameters:
       - name: replicaCount
         value: "2"
+      - name: service.type
+        value: "ClusterIP"
   syncPolicy:
     automated: {}
     syncOptions:
