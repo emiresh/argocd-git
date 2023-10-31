@@ -12,6 +12,11 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     chart: wordpress
     targetRevision: 17.0.0
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
+    
     helm:
       parameters:
       - name: wordpressUsername
@@ -21,7 +26,4 @@ spec:
       - name: mariadb.enabled
         value: "false"
 
-  syncPolicy:
-    automated: {}
-    syncOptions:
-    - CreateNamespace=true
+  
