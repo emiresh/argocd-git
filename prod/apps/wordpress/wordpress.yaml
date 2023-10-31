@@ -1,3 +1,4 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -12,16 +13,15 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     chart: wordpress
     targetRevision: 17.0.0
-    helm:
-      parameters:
-      - name: wordpressUsername
-        value: iresh
-      - name: wordpressPassword
-        value: iresh@19989
-      - name: mariadb.enabled
-        value: "false"
-
   syncPolicy:
     automated: {}
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
+    helm:
+      parameters:
+        - name: wordpressUsername
+          value: iresh
+        - name: wordpressPassword
+          value: iresh@19989
+        - name: mariadb.enabled
+          value: "false"
