@@ -16,7 +16,6 @@ spec:
     automated: {}
     syncOptions:
     - CreateNamespace=true
-
     helm:
       parameters:
       - name: wordpressUsername
