@@ -8,16 +8,16 @@ spec:
     namespace: wordpress
     server: https://kubernetes.default.svc
   project: wordpress
-  source:
+  sources:
+  - repoURL: https://charts.bitnami.com/bitnami
     chart: wordpress
-    repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 17.0.0
     helm:
-      parameters:
-      - name: wordpressUsername
-        value: iresh
-      - name: wordpressPassword
-        value: iresh@19989
+      valueFiles:
+      - $values/prod/apps/wordpress/value-file.yaml
+  - repoURL: 'https://github.com/emiresh/argocd-git.git'
+    targetRevision: main
+    ref: values
   syncPolicy:
     automated: {}
     syncOptions:
